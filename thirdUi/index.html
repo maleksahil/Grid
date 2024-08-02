@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootstrapGrid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container {
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row {
+        width: 80%;
+    }
+
+    .col {
+        /* border: 1px solid black; */
+        background-color: #e4e4e4;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col1 {
+
+        background-color: rgb(129, 236, 236);
+    }
+
+    .col2 {
+
+        background-color: rgb(59, 212, 59);
+    }
+
+    .image {
+        height: 80vh;
+        aspect-ratio: 1/1;
+        /* border: 1px solid black; */
+        position: absolute;
+    }
+
+    .text {
+        height: 90%;
+        width: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+
+    .first {
+        height: 30%;
+        width: 80%;
+        /* border: 1px solid black; */
+        text-align: center;
+    }
+
+    .first h1 {
+        color: rgb(255, 123, 0);
+        font-size: 50px;
+        font-family: "Edu AU VIC WA NT Hand", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+    }
+
+    .paragraph {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+
+    .paragraph p {
+        font-family: "Edu AU VIC WA NT Hand", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #590ad8;
+        font-weight: 700;
+    }
+
+    .second {
+        height: 10%;
+        width: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second2 {
+        height: 10%;
+        width: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .third {
+        height: 10%;
+        width: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        border-radius: 5px;
+        width: 50%;
+        height: 100%;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #1f5cbf;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #779dd9;
+    }
+
+    input {
+        outline: none;
+        border: none;
+    }
+
+    .email {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: 1px solid #ccc;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+    }
+
+    .arrow {
+        border: 1px solid #ccc;
+        height: 100%;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: 2px;
+        background-color: white;
+    }
+
+    .arrow:hover {
+        background-color: #e0e0e0;
+    }
+
+    #show{
+        display: none;
+    }
+
+    @media (width <=765px) {
+        .container {
+            margin-top: 300px;
+        }
+
+        #hide{
+            display: none;
+        }
+
+        #show{
+            display: block;
+        }
+
+        body {
+            margin-left: 20px;
+        }
+
+        p {
+            display: none;
+        }
+
+
+
+    }
+
+    @media (width >=765px) {
+        .col1 {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .col2 {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="image">
+            <img src="_a63d7352-fd20-4eb7-9636-72a56ac2cbf3-removebg-preview.png" alt="aa" height="100%" width="100%">
+        </div>
+        <div class="row">
+
+            <div class="col col2 col-12 col-md-6">
+                <div class="text">
+
+                    <div class="first">
+                         <h1 >Sigma Horse</h1>
+                         <h1 id="show">,but on steroids</h1>
+                       
+                    </div>
+
+                    <div class="paragraph">
+                        <p>Tired of being a couch potato? Want abs like a washboard? Join our elite club of professional
+                            couch surfers! We offer world-class training in the art of snacking, remote control mastery,
+                            and binge-watching. No heavy lifting, just heavy eyelids. Become the envy of your
+                            neighborhood by achieving peak couch potato potential. Limited spots available for the lazy
+                            and proud. DM to sign up!
+                            #CouchPotatoClub #NoGymNoProblem #RelaxAndFlex</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col col1 col-12 col-md-6">
+                <div class="text">
+
+                    <div class="first">
+                       <h1 id="hide">,but on steroids</h1>
+                        
+                    </div>
+
+                    <div class="second">
+
+                        <div class="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" placeholder="Enter your email..">
+                        </div>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="second2">
+
+                        <div class="email">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="text" placeholder="Enter your password ..">
+                        </div>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="third">
+                        <button>Log In</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+
+</html>
